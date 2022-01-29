@@ -14,7 +14,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\MemberService.Repository\MemberService.Repository.csproj" />
       <ProjectReference Include="..\MemberService.Shared\MemberService.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Model" />
     </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@ using DataAbstractions.Dapper;
 
 namespace MemberService.Repository.Dapper;
 
-public interface IOracleDapperRepository
+public interface IDatabaseDapperRepository
 {
     IDataAccessor OpenDbConnection();
     Task<IEnumerable<T>> QueryData<T>(string sqlCommand, object sqlParams);

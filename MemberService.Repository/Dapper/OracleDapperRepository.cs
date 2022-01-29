@@ -1,13 +1,12 @@
 using System.Runtime.ExceptionServices;
 using DataAbstractions.Dapper;
-using MemberService.Repository.Dapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Oracle.ManagedDataAccess.Client;
 
-namespace MemberService.Shared.Repositories.Dapper;
+namespace MemberService.Repository.Dapper;
 
-public class OracleDapperRepository : IOracleDapperRepository
+public class OracleDapperRepository : IDatabaseDapperRepository
 {
     private readonly ILogger<OracleDapperRepository> _logger;
     private readonly string _connectionString;

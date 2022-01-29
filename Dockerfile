@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["MemberWebApi/MemberWebApi.csproj", "MemberWebApi/"]
+COPY ["MemberService/MemberService.csproj", "MemberWebApi/"]
 RUN dotnet restore "MemberWebApi/MemberWebApi.csproj"
 COPY . .
 WORKDIR "/src/MemberWebApi"
