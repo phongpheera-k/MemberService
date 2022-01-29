@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService.Shared", "Mem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService.Tests", "MemberService.Tests\MemberService.Tests.csproj", "{390CDF7F-3169-4384-95E8-95056EF8998F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService.Repository", "MemberService.Repository\MemberService.Repository.csproj", "{AD418565-10FB-43AF-B27D-D2477D4E09EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{390CDF7F-3169-4384-95E8-95056EF8998F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{390CDF7F-3169-4384-95E8-95056EF8998F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{390CDF7F-3169-4384-95E8-95056EF8998F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD418565-10FB-43AF-B27D-D2477D4E09EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD418565-10FB-43AF-B27D-D2477D4E09EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD418565-10FB-43AF-B27D-D2477D4E09EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD418565-10FB-43AF-B27D-D2477D4E09EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 using DataAbstractions.Dapper;
 
-namespace MemberService.Shared.Repositories.Dapper;
+namespace MemberService.Repository.Dapper;
 
 public interface IOracleDapperRepository
 {

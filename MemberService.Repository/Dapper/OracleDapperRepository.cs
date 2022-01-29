@@ -1,5 +1,6 @@
 using System.Runtime.ExceptionServices;
 using DataAbstractions.Dapper;
+using MemberService.Repository.Dapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Oracle.ManagedDataAccess.Client;
