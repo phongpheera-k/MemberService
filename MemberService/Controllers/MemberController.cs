@@ -1,5 +1,5 @@
-using MemberService.Model;
-using MemberService.Shared.Interfaces;
+using MemberService.Service.Domains;
+using MemberService.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MemberService.Controllers;

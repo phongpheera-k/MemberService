@@ -1,7 +1,7 @@
 using MemberService.Domain.Model;
-using MemberService.Model;
+using MemberService.Service.Domains;
 
-namespace MemberService.Shared.Interfaces;
+namespace MemberService.Service.Interfaces;
 
 public interface IMemberMasterService
 {

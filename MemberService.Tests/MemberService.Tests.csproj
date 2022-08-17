@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MemberService.Shared\MemberService.Shared.csproj" />
+      <ProjectReference Include="..\MemberService.Service\MemberService.Service.csproj" />
     </ItemGroup>
 
 </Project>

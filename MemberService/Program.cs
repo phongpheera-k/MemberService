@@ -1,8 +1,8 @@
 using MemberService.Repository.Dapper;
 using MemberService.Repository.Interfaces;
 using MemberService.Repository.Repositories;
-using MemberService.Shared.Interfaces;
-using MemberService.Shared.Services;
+using MemberService.Service.Interfaces;
+using MemberService.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

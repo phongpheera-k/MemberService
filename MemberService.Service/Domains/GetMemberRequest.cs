@@ -1,4 +1,4 @@
-namespace MemberService.Model;
+namespace MemberService.Service.Domains;
 
 public class GetMemberRequest
 {

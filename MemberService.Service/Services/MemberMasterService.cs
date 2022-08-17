@@ -1,11 +1,10 @@
 using MemberService.Domain.Model;
-using MemberService.Model;
 using MemberService.Repository.Interfaces;
-using MemberService.Repository.Repositories;
-using MemberService.Shared.Interfaces;
+using MemberService.Service.Domains;
+using MemberService.Service.Interfaces;
 using Microsoft.Extensions.Logging;
 
-namespace MemberService.Shared.Services;
+namespace MemberService.Service.Services;
 
 public class MemberMasterService : IMemberMasterService
 {
