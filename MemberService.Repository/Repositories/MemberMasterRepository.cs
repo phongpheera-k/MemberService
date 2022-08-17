@@ -1,5 +1,5 @@
+using MemberService.Domain.Model;
 using MemberService.Repository.Dapper;
-using MemberService.Repository.Domains;
 using MemberService.Repository.Interfaces;
 
 namespace MemberService.Repository.Repositories;
@@ -37,4 +37,6 @@ public class MemberMasterRepository : IMemberMasterRepository
                  where surname = :surname";
         return await _databaseDapper.QueryData<MemberMaster>(sqlCommand, new {surname = surname});
     }
+    
+    // public async Task 
 }

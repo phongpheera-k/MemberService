@@ -1,4 +1,4 @@
-using MemberService.Repository.Domains;
+using MemberService.Domain.Model;
 
 namespace MemberService.Repository.Interfaces;
 

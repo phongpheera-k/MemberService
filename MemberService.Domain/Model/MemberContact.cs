@@ -1,4 +1,4 @@
-namespace MemberService.Repository.Domains;
+namespace MemberService.Domain.Model;
 
 public class MemberContact
 {

@@ -1,5 +1,5 @@
+using MemberService.Domain.Model;
 using MemberService.Model;
-using MemberService.Repository.Domains;
 
 namespace MemberService.Shared.Interfaces;
 

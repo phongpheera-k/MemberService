@@ -1,7 +1,7 @@
+using MemberService.Domain.Model;
 using MemberService.Model;
-using MemberService.Repository.Dapper;
-using MemberService.Repository.Domains;
 using MemberService.Repository.Interfaces;
+using MemberService.Repository.Repositories;
 using MemberService.Shared.Interfaces;
 using Microsoft.Extensions.Logging;
 
@@ -26,7 +26,7 @@ public class MemberMasterService : IMemberMasterService
         var memberBySurname = new List<MemberMaster>();
 
         if (request.MemberId is not null)
-            memberById.Add(await _memberMaster.GetMemberById(request.MemberId));
+            memberById.Add((await _memberMaster.GetMemberById(request.MemberId))!);
 
         if (request.Name is not null)
             memberByName = (await _memberMaster.GetMemberByName(request.Name)).ToList();
