@@ -10,7 +10,7 @@ public class Member
     public string Name { get; init; }
     public string Surname { get; init; }
     public DateTime BirthDay { get; set; }
-    public Address[] Address { get; set; }
+    public List<Address> Address { get; set; }
 
     public int Age => DateTime.Now.Year - BirthDay.Year;
 
@@ -20,6 +20,9 @@ public class Member
     }
 
     public string GetThisFullAddress(int index) => Address[index].AllAddress();
+
+    public void AddAddress(Address address) => Address.Add(address);
+    public void AddsAddress(IEnumerable<Address> addresses) => Address.AddRange(addresses);
 }
 
 
