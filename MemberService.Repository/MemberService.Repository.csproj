@@ -7,11 +7,10 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Dapper.Oracle" Version="2.0.3" />
-      <PackageReference Include="DataAbstractions.Dapper" Version="3.1.0" />
-      <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
-      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
-      <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.50" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+      <PackageReference Include="MongoDB.Bson" Version="2.23.1" />
+      <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
     </ItemGroup>
 
     <ItemGroup>
