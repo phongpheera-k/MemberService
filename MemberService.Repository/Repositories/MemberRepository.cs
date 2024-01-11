@@ -12,7 +12,7 @@ namespace MemberService.Repository.Repositories
             _members = database.GetCollection<Member>("Members");
         }
 
-        public async Task<Member> GetMember(string id) 
+        public async Task<Member?> GetMember(string id) 
             => await _members.Find(member => member.Id == id)
                 .FirstOrDefaultAsync();
 
