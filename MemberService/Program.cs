@@ -1,3 +1,5 @@
+using MemberService.Repository.Interfaces;
+using MemberService.Repository.Repositories;
 using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,10 +14,11 @@ builder.Host
     //.AddDiscoveryClient() //Steeltoe.Discovery.Consul
     .UseNLog();
 
-// Add services to the container.
+// Add services to the container
+var connectionString = builder.Configuration.GetConnectionString("Database")!;
+builder.Services.AddSingleton<IMemberRepository>(_ => new MemberRepository(connectionString));
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
