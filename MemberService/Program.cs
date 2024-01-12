@@ -1,5 +1,6 @@
-using MemberService.Repository.Interfaces;
 using MemberService.Repository.Repositories;
+using MemberService.Repository.Repositories.Implements;
+using MemberService.Repository.Repositories.Interfaces;
 using NLog.Web;
 
 var builder = WebApplication.CreateBuilder(args);

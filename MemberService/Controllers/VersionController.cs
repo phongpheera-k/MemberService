@@ -1,6 +1,3 @@
-using System.Reflection;
-using Microsoft.AspNetCore.Mvc;
-
 namespace MemberService.Controllers;
 
 [ApiController]
