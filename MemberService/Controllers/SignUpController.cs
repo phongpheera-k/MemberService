@@ -1,5 +1,4 @@
 using MemberService.Service.Models.SignUp;
-using MemberService.Service.Services.Interfaces;
 
 namespace MemberService.Controllers;
 

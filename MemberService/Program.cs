@@ -1,8 +1,3 @@
-using MemberService.Repository.Repositories;
-using MemberService.Repository.Repositories.Implements;
-using MemberService.Repository.Repositories.Interfaces;
-using NLog.Web;
-
 var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.ConfigureKestrel(options => options.AddServerHeader = false);
 
@@ -17,7 +12,11 @@ builder.Host
 
 // Add services to the container
 var connectionString = builder.Configuration.GetConnectionString("Database")!;
-builder.Services.AddSingleton<IMemberRepository>(_ => new MemberRepository(connectionString));
+builder.Services.AddScoped<IMemberAccountRepository>(_ => new MemberAccountRepository(connectionString));
+
+builder.Services.AddScoped<IHashService, HashService>();
+builder.Services.AddScoped<IJwtService, JwtService>();
+builder.Services.AddTransient<ISignUpService, SignUpService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -25,7 +24,6 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsProduction())
 {
     app.UseSwagger();

@@ -2,16 +2,16 @@ using MemberService.Repository.Repositories.Interfaces;
 
 namespace MemberService.Repository.Repositories.Implements
 {
-    public class MemberRepository : IMemberRepository
+    public class MemberAccountRepository : IMemberAccountRepository
     {
         private readonly IMongoCollection<MemberAccount> _members;
 
-        public MemberRepository(string connectionString)
+        public MemberAccountRepository(string connectionString)
         {
             var client = new MongoClient(connectionString);
             var database = client.GetDatabase(new MongoUrl(connectionString).DatabaseName);
 
-            _members = database.GetCollection<MemberAccount>("Members");
+            _members = database.GetCollection<MemberAccount>("MemberAccount");
         }
 
         public async Task<MemberAccount?> GetMember(string id) 
