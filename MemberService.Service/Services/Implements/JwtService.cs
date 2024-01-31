@@ -29,24 +29,18 @@ public class JwtService : IJwtService
         return tokenHandler.WriteToken(token);
     }
 
-    public bool VerifyToken(string token)
+    public string? GetId(string token)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
-        try
+        var tokenValidationParameters = new TokenValidationParameters
         {
-            tokenHandler.ValidateToken(token, new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey = _key,
-                ValidateIssuer = false,
-                ValidateAudience = false
-            }, out _);
-
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = _key,
+            ValidateIssuer = false,
+            ValidateAudience = false
+        };
+        
+        return tokenHandler.ValidateToken(token, tokenValidationParameters, out var validatedToken)?.Identity?.Name;
     }
 }
