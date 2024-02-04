@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService", "MemberService\MemberService.csproj", "{438E00D4-DF94-4323-929E-5A67736DFCAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService.Service", "MemberService.Service\MemberService.Service.csproj", "{DD740236-9D99-4E73-B353-F5B390FF1B13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService.Services", "MemberService.Services\MemberService.Services.csproj", "{DD740236-9D99-4E73-B353-F5B390FF1B13}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberService.Tests", "MemberService.Tests\MemberService.Tests.csproj", "{390CDF7F-3169-4384-95E8-95056EF8998F}"
 EndProject

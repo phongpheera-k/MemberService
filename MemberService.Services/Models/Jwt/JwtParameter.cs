@@ -1,4 +1,4 @@
-namespace MemberService.Service.Models.Jwt;
+namespace MemberService.Services.Models.Jwt;
 
 public class JwtParameter(string id, TimeSpan expiredAge)
 {

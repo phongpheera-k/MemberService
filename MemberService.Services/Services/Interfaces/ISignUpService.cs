@@ -1,4 +1,4 @@
-namespace MemberService.Service.Services.Interfaces;
+namespace MemberService.Services.Services.Interfaces;
 
 public interface ISignUpService
 {

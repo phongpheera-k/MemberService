@@ -1,4 +1,4 @@
-namespace MemberService.Service.Models.SignUp;
+namespace MemberService.Services.Models.SignUp;
 
 public class SignUpResponse
 {

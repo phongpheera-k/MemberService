@@ -1,9 +1,4 @@
-using JoeGerienLib.Extension;
-using MemberService.Domain.Collections;
-using MemberService.Domain.Model;
-using MemberService.Repository.Repositories.Interfaces;
-
-namespace MemberService.Service.Services.Implements;
+namespace MemberService.Services.Services.Implements;
 
 public class SignUpService(IMemberAccountRepository memberAccountRepository,
     IHashService hashService,
@@ -11,8 +6,11 @@ public class SignUpService(IMemberAccountRepository memberAccountRepository,
 {
     public async Task<SignUpResponse?> SignUp(SignUpRequest request)
     {
+        if (request.AccountLoginType.IsIn(AccountType.PasswordRequired) && request.Password.IsNullOrEmpty())
+            throw new ArgumentException("Password is required");
+        
         var passwordEncoder = request.AccountLoginType.IsIn(AccountType.PasswordRequired)
-            ? hashService.PasswordHashing(request.Password)
+            ? hashService.PasswordHashing(request.Password.GetValueOrEmpty())
             : null;
         var memberAccount = new MemberAccount(request.Id, passwordEncoder, request.AccountLoginType);
         var member = await memberAccountRepository.CreateMember(memberAccount);

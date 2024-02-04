@@ -1,4 +1,4 @@
-namespace MemberService.Service.Services.Implements;
+namespace MemberService.Services.Services.Implements;
 
 public class HashService(IConfiguration configuration) : IHashService
 {
