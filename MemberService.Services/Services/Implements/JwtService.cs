@@ -17,7 +17,7 @@ public class JwtService : IJwtService
         {
             Subject = new ClaimsIdentity(new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, parameter.Id)
+                new Claim(ClaimTypes.NameIdentifier, parameter.Id.ToString())
             }),
             Expires = parameter.ExpiredDate,
             SigningCredentials =  _creds
@@ -29,7 +29,7 @@ public class JwtService : IJwtService
         return tokenHandler.WriteToken(token);
     }
 
-    public string? GetId(string token)
+    public Guid? GetId(string token)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var tokenValidationParameters = new TokenValidationParameters
@@ -41,6 +41,7 @@ public class JwtService : IJwtService
             ValidateAudience = false
         };
         
-        return tokenHandler.ValidateToken(token, tokenValidationParameters, out var validatedToken)?.Identity?.Name;
+        var identityName = tokenHandler.ValidateToken(token, tokenValidationParameters, out var validatedToken)?.Identity?.Name;
+        return identityName is not null ? Guid.Parse(identityName) : null;
     }
 }

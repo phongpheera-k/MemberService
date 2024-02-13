@@ -14,7 +14,7 @@ namespace MemberService.Repository.Repositories.Implements
             _members = database.GetCollection<MemberAccount>("MemberAccount");
         }
 
-        public async Task<MemberAccount?> GetMember(string id) 
+        public async Task<MemberAccount?> GetMember(Guid id) 
             => await _members.Find(member => member.Id == id)
                 .FirstOrDefaultAsync();
 

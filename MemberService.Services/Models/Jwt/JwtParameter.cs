@@ -1,7 +1,7 @@
 namespace MemberService.Services.Models.Jwt;
 
-public class JwtParameter(string id, TimeSpan expiredAge)
+public class JwtParameter(Guid id, TimeSpan expiredAge)
 {
-    public string Id { get; set; } = id;
+    public Guid Id { get; set; } = id;
     public DateTime ExpiredDate { get; set; } = DateTime.UtcNow.Add(expiredAge);
 }
